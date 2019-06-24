@@ -12213,7 +12213,7 @@
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
-      "NpgSql.EntityFrameworkCore.PostgreSQL.Design",
+      "NpgSql.EntityFrameworkCore.PostgreSQL.Design >= 1.1.1",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 2.1.0"
     ]
   },
@@ -12275,7 +12275,7 @@
           },
           "NpgSql.EntityFrameworkCore.PostgreSQL.Design": {
             "target": "Package",
-            "version": "(, )"
+            "version": "[1.1.1, )"
           },
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",

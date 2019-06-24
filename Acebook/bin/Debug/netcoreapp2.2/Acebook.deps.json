@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "signature": "bc66858d480aaf9d23fda869d52b1cf85c0ec64b"
   },
   "compilationOptions": {
     "defines": [
@@ -26,7 +26,9 @@
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
-          "Microsoft.NETCore.App": "2.2.0"
+          "Microsoft.NETCore.App": "2.2.0",
+          "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "1.1.1",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "2.1.0"
         },
         "runtime": {
           "Acebook.dll": {}
@@ -35,6 +37,76 @@
           "Acebook.dll": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.Relational.Design/1.1.2": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.0",
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {
+            "assemblyVersion": "1.1.2.0",
+            "fileVersion": "1.1.2.30427"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
+        }
+      },
+      "Npgsql/4.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1",
+          "System.Threading.Tasks.Extensions": "4.5.1",
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Npgsql.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Npgsql.dll": {}
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL/2.1.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Abstractions": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.0",
+          "Npgsql": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL.Design/1.1.1": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Relational.Design": "1.1.2",
+          "Microsoft.Extensions.DependencyInjection": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
+          "NETStandard.Library": "2.0.3",
+          "Npgsql": "4.0.0",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "2.1.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll": {
+            "assemblyVersion": "1.1.1.0",
+            "fileVersion": "1.1.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll": {}
+        }
+      },
+      "System.ValueTuple/4.5.0": {},
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
@@ -1321,7 +1393,7 @@
           "System.Threading.Tasks": "4.3.0",
           "System.Threading.Tasks.Parallel": "4.3.0",
           "System.Threading.Thread": "4.3.0",
-          "System.ValueTuple": "4.3.0",
+          "System.ValueTuple": "4.5.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0",
           "System.Xml.XPath.XDocument": "4.3.0",
@@ -3119,14 +3191,6 @@
         },
         "compileOnly": true
       },
-      "System.ValueTuple/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
-        "compileOnly": true
-      },
       "System.Xml.ReaderWriter/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -3236,6 +3300,41 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.EntityFrameworkCore.Relational.Design/1.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pu2Jxndzv3slY6Ch9mdqVfL3AFhH5XzM02Rrnf9h5lKoViprYx1O+nNqT3BxmGrPkYadY9OddG2b9+sUO3Xuzw==",
+      "path": "microsoft.entityframeworkcore.relational.design/1.1.2",
+      "hashPath": "microsoft.entityframeworkcore.relational.design.1.1.2.nupkg.sha512"
+    },
+    "Npgsql/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+8E1qI9+dPuJwNnWVKqM5Y/XIZMqyNfVrlXmvqZY9XZ8t+wnGvZKqgz/BfbOXwAurunacG7xF9jWyh7AgWOnVQ==",
+      "path": "npgsql/4.0.0",
+      "hashPath": "npgsql.4.0.0.nupkg.sha512"
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VuyoXIZnJ85HErpibabzJsiY/Na9x+auBJl9Uz++q36elDRAE6llW1O2pJec+N8O1m55qc0ouxvVHGJFsxaH1A==",
+      "path": "npgsql.entityframeworkcore.postgresql/2.1.0",
+      "hashPath": "npgsql.entityframeworkcore.postgresql.2.1.0.nupkg.sha512"
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL.Design/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UXgRNtmOIc/gw3bvdof4hZu4rL9xIUGeSWklasd+Oj9SF7EH+OTu43/Qsz6YYrqX2sem2qxd004LwtW/CWpVHg==",
+      "path": "npgsql.entityframeworkcore.postgresql.design/1.1.1",
+      "hashPath": "npgsql.entityframeworkcore.postgresql.design.1.1.1.nupkg.sha512"
+    },
+    "System.ValueTuple/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",
@@ -5168,13 +5267,6 @@
       "sha512": "sha512-OHmbT+Zz065NKII/ZHcH9XO1dEuLGI1L2k7uYss+9C1jLxTC9kTZZuzUOyXHayRk+dft9CiDf3I/QZ0t8JKyBQ==",
       "path": "system.threading.thread/4.3.0",
       "hashPath": "system.threading.thread.4.3.0.nupkg.sha512"
-    },
-    "System.ValueTuple/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
-      "path": "system.valuetuple/4.3.0",
-      "hashPath": "system.valuetuple.4.3.0.nupkg.sha512"
     },
     "System.Xml.ReaderWriter/4.3.0": {
       "type": "package",
