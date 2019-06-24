@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj": {}
+    "/Users/student/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj": {}
   },
   "projects": {
-    "acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj": {
+    "/Users/student/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj",
+        "projectUniqueName": "/Users/student/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj",
         "projectName": "Acebook.Tests",
-        "projectPath": "acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj",
-        "packagesPath": ".nuget/packages/",
-        "outputPath": "acebook-sharpies/Acebook.Tests/obj/",
+        "projectPath": "/Users/student/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj",
+        "packagesPath": "/Users/student/.nuget/packages/",
+        "outputPath": "/Users/student/acebook-sharpies/Acebook.Tests/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          ".nuget/NuGet/NuGet.Config"
+          "/Users/student/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -28,8 +28,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "acebook-sharpies/Acebook/Acebook.csproj": {
-                "projectPath": "acebook-sharpies/Acebook/Acebook.csproj"
+              "/Users/student/acebook-sharpies/Acebook/Acebook.csproj": {
+                "projectPath": "/Users/student/acebook-sharpies/Acebook/Acebook.csproj"
               }
             }
           }
@@ -74,20 +74,20 @@
         }
       }
     },
-    "acebook-sharpies/Acebook/Acebook.csproj": {
+    "/Users/student/acebook-sharpies/Acebook/Acebook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "acebook-sharpies/Acebook/Acebook.csproj",
+        "projectUniqueName": "/Users/student/acebook-sharpies/Acebook/Acebook.csproj",
         "projectName": "Acebook",
-        "projectPath": "acebook-sharpies/Acebook/Acebook.csproj",
-        "packagesPath": ".nuget/packages/",
-        "outputPath": "acebook-sharpies/Acebook/obj/",
+        "projectPath": "/Users/student/acebook-sharpies/Acebook/Acebook.csproj",
+        "packagesPath": "/Users/student/.nuget/packages/",
+        "outputPath": "/Users/student/acebook-sharpies/Acebook/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          ".nuget/NuGet/NuGet.Config"
+          "/Users/student/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
