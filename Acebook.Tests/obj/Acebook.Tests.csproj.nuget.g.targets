@@ -15,5 +15,6 @@
     <Import Project="/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.server.iis/2.2.0/build/netstandard2.0/Microsoft.AspNetCore.Server.IIS.targets" Condition="Exists('/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.server.iis/2.2.0/build/netstandard2.0/Microsoft.AspNetCore.Server.IIS.targets')" />
     <Import Project="/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.mvc.razor.viewcompilation/2.2.0/build/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.ViewCompilation.targets" Condition="Exists('/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.mvc.razor.viewcompilation/2.2.0/build/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.ViewCompilation.targets')" />
     <Import Project="/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.app/2.2.0/build/netcoreapp2.2/Microsoft.AspNetCore.App.targets" Condition="Exists('/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.app/2.2.0/build/netcoreapp2.2/Microsoft.AspNetCore.App.targets')" />
+    <Import Project="$(NuGetPackageRoot)coverlet.msbuild/2.6.2/build/coverlet.msbuild.targets" Condition="Exists('$(NuGetPackageRoot)coverlet.msbuild/2.6.2/build/coverlet.msbuild.targets')" />
   </ImportGroup>
 </Project>
