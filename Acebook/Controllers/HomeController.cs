@@ -19,7 +19,7 @@ namespace Acebook.Controllers
         [HttpGet]        
         public IActionResult Index()
         {
-            List<Post> posts = _context.Post.ToList();
+            List<Post> posts = _context.Post.OrderByDescending(x => x.CreatedAt).ToList();
             return View(posts);
         }
 
