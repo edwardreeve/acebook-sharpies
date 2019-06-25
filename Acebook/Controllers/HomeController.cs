@@ -14,10 +14,13 @@ namespace Acebook.Controllers
         public HomeController(AcebookContext context)         
         {             
             _context = context; 
-        }             
+        }    
+
+        [HttpGet]        
         public IActionResult Index()
         {
-            return View();
+            List<Post> posts = _context.Post.ToList();
+            return View(posts);
         }
 
         public IActionResult Privacy()

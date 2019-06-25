@@ -1,8 +1,16 @@
-﻿@{
+﻿@model IEnumerable<Acebook.Models.Post>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome Sharpies</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building top-notch Shoobie Doobie Web apps with ASP.NET Core</a>.</p>
+
+    <ul>
+    @foreach(var item in Model) 
+    {
+        <li>@item.Body</li>  
+    }
+    </ul>
 </div>

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "bc66858d480aaf9d23fda869d52b1cf85c0ec64b"
+    "signature": "2404dc50e8c446876dc8a0858e6d845e6bec5cc8"
   },
   "compilationOptions": {
     "defines": [
@@ -28,7 +28,9 @@
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "1.1.1",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "2.1.0"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "2.1.0",
+          "Selenium.Chrome.WebDriver": "74.0.0",
+          "Selenium.WebDriver": "4.0.0-alpha01"
         },
         "runtime": {
           "Acebook.dll": {}
@@ -104,6 +106,21 @@
         },
         "compile": {
           "lib/netstandard1.3/Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll": {}
+        }
+      },
+      "Selenium.Chrome.WebDriver/74.0.0": {},
+      "Selenium.WebDriver/4.0.0-alpha01": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/WebDriver.dll": {}
         }
       },
       "System.ValueTuple/4.5.0": {},
@@ -3328,6 +3345,20 @@
       "sha512": "sha512-UXgRNtmOIc/gw3bvdof4hZu4rL9xIUGeSWklasd+Oj9SF7EH+OTu43/Qsz6YYrqX2sem2qxd004LwtW/CWpVHg==",
       "path": "npgsql.entityframeworkcore.postgresql.design/1.1.1",
       "hashPath": "npgsql.entityframeworkcore.postgresql.design.1.1.1.nupkg.sha512"
+    },
+    "Selenium.Chrome.WebDriver/74.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3HCLOrNh20kZ+Om1REzpBAICajkTbXI7SvG0FVbYRC0yif/umRh7u5EVXpf9Fo3rK/uexG8GB5kAI6xBwStyIA==",
+      "path": "selenium.chrome.webdriver/74.0.0",
+      "hashPath": "selenium.chrome.webdriver.74.0.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver/4.0.0-alpha01": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jv6xU5paNsVFbM60NQkkHkOTxSjlmvQY+I0BCew6cJaKAeeDkVT44l3huSv7Qs1cRWM67mMIn/z+eQrBNZ4jxA==",
+      "path": "selenium.webdriver/4.0.0-alpha01",
+      "hashPath": "selenium.webdriver.4.0.0-alpha01.nupkg.sha512"
     },
     "System.ValueTuple/4.5.0": {
       "type": "package",
