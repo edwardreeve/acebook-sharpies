@@ -3412,6 +3412,24 @@
           }
         }
       },
+      "Selenium.Chrome.WebDriver/74.0.0": {
+        "type": "package",
+        "build": {
+          "build/Selenium.Chrome.WebDriver.targets": {}
+        }
+      },
+      "Selenium.WebDriver/4.0.0-alpha01": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/WebDriver.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5093,7 +5111,9 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "NpgSql.EntityFrameworkCore.PostgreSQL.Design": "1.1.1",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "2.1.0"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "2.1.0",
+          "Selenium.Chrome.WebDriver": "74.0.0",
+          "Selenium.WebDriver": "4.0.0-alpha01"
         },
         "compile": {
           "bin/placeholder/Acebook.dll": {}
@@ -8871,6 +8891,38 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Selenium.Chrome.WebDriver/74.0.0": {
+      "sha512": "3HCLOrNh20kZ+Om1REzpBAICajkTbXI7SvG0FVbYRC0yif/umRh7u5EVXpf9Fo3rK/uexG8GB5kAI6xBwStyIA==",
+      "type": "package",
+      "path": "selenium.chrome.webdriver/74.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Selenium.Chrome.WebDriver.targets",
+        "driver/chromedriver.exe",
+        "selenium.chrome.webdriver.74.0.0.nupkg.sha512",
+        "selenium.chrome.webdriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver/4.0.0-alpha01": {
+      "sha512": "jv6xU5paNsVFbM60NQkkHkOTxSjlmvQY+I0BCew6cJaKAeeDkVT44l3huSv7Qs1cRWM67mMIn/z+eQrBNZ4jxA==",
+      "type": "package",
+      "path": "selenium.webdriver/4.0.0-alpha01",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/WebDriver.dll",
+        "lib/net45/WebDriver.xml",
+        "lib/net46/WebDriver.dll",
+        "lib/net46/WebDriver.xml",
+        "lib/net47/WebDriver.dll",
+        "lib/net47/WebDriver.xml",
+        "lib/netstandard2.0/WebDriver.dll",
+        "lib/netstandard2.0/WebDriver.xml",
+        "selenium.webdriver.4.0.0-alpha01.nupkg.sha512",
+        "selenium.webdriver.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -13825,6 +13877,8 @@
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "NUnit3TestAdapter >= 3.11.0",
+      "Selenium.Chrome.WebDriver >= 74.0.0",
+      "Selenium.WebDriver >= 4.0.0-alpha01",
       "coverlet.msbuild >= 2.6.2",
       "nunit >= 3.11.0"
     ]
@@ -13903,6 +13957,14 @@
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[3.11.0, )"
+          },
+          "Selenium.Chrome.WebDriver": {
+            "target": "Package",
+            "version": "[74.0.0, )"
+          },
+          "Selenium.WebDriver": {
+            "target": "Package",
+            "version": "[4.0.0-alpha01, )"
           },
           "coverlet.msbuild": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

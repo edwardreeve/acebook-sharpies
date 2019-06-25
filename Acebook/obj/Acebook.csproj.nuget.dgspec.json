@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/Acebook.csproj": {}
+    "/Users/student/acebook-sharpies/Acebook/Acebook.csproj": {}
   },
   "projects": {
-    "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/Acebook.csproj": {
+    "/Users/student/acebook-sharpies/Acebook/Acebook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/Acebook.csproj",
+        "projectUniqueName": "/Users/student/acebook-sharpies/Acebook/Acebook.csproj",
         "projectName": "Acebook",
-        "projectPath": "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/Acebook.csproj",
+        "projectPath": "/Users/student/acebook-sharpies/Acebook/Acebook.csproj",
         "packagesPath": "/Users/student/.nuget/packages/",
-        "outputPath": "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/obj/",
+        "outputPath": "/Users/student/acebook-sharpies/Acebook/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -63,6 +63,14 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[2.1.0, )"
+            },
+            "Selenium.Chrome.WebDriver": {
+              "target": "Package",
+              "version": "[74.0.0, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.0.0-alpha01, )"
             }
           },
           "imports": [

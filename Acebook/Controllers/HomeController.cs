@@ -10,6 +10,11 @@ namespace Acebook.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly AcebookContext _context;          
+        public HomeController(AcebookContext context)         
+        {             
+            _context = context; 
+        }             
         public IActionResult Index()
         {
             return View();
