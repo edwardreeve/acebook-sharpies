@@ -36,8 +36,7 @@ namespace Acebook.Controllers
         [HttpPost("post")]
         public async Task<ActionResult<string>> PostUser(User user)
         {
-            string encryptedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password);
-            user.Password = encryptedPassword;
+            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
             _context.User.Add(user);
             await _context.SaveChangesAsync();
 
