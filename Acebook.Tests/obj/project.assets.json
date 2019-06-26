@@ -42,6 +42,18 @@
           "lib/netstandard2.0/FakeItEasy.dll": {}
         }
       },
+      "FluentAssertions/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.4.0"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/FluentAssertions.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/FluentAssertions.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -3418,7 +3430,19 @@
           "build/Selenium.Chrome.WebDriver.targets": {}
         }
       },
-      "Selenium.WebDriver/4.0.0-alpha01": {
+      "Selenium.Support/3.141.0": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.141.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {}
+        }
+      },
+      "Selenium.WebDriver/3.141.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "10.0.3"
@@ -3601,6 +3625,18 @@
         },
         "runtime": {
           "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.4.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
         }
       },
       "System.Console/4.3.0": {
@@ -4687,6 +4723,21 @@
           "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
         }
       },
+      "System.Security.Cryptography.ProtectedData/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Security.Cryptography.X509Certificates/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5113,7 +5164,7 @@
           "NpgSql.EntityFrameworkCore.PostgreSQL.Design": "1.1.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "2.1.0",
           "Selenium.Chrome.WebDriver": "74.0.0",
-          "Selenium.WebDriver": "4.0.0-alpha01"
+          "Selenium.WebDriver": "3.141.0"
         },
         "compile": {
           "bin/placeholder/Acebook.dll": {}
@@ -5227,6 +5278,35 @@
         "lib/netstandard2.0/FakeItEasy.dll",
         "lib/netstandard2.0/FakeItEasy.pdb",
         "lib/netstandard2.0/FakeItEasy.xml"
+      ]
+    },
+    "FluentAssertions/5.7.0": {
+      "sha512": "UBSa5xvpHi8dhrSAZ8q0VGIly6SEHqIP4SfgmvrVvi7YQUZEE+c9gSTPalANw5x3CwNLuafY9SrCM23GiyK9Qg==",
+      "type": "package",
+      "path": "fluentassertions/5.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentassertions.5.7.0.nupkg.sha512",
+        "fluentassertions.nuspec",
+        "lib/net45/FluentAssertions.dll",
+        "lib/net45/FluentAssertions.pdb",
+        "lib/net45/FluentAssertions.xml",
+        "lib/net47/FluentAssertions.dll",
+        "lib/net47/FluentAssertions.pdb",
+        "lib/net47/FluentAssertions.xml",
+        "lib/netcoreapp2.0/FluentAssertions.dll",
+        "lib/netcoreapp2.0/FluentAssertions.pdb",
+        "lib/netcoreapp2.0/FluentAssertions.xml",
+        "lib/netstandard1.3/FluentAssertions.dll",
+        "lib/netstandard1.3/FluentAssertions.pdb",
+        "lib/netstandard1.3/FluentAssertions.xml",
+        "lib/netstandard1.6/FluentAssertions.dll",
+        "lib/netstandard1.6/FluentAssertions.pdb",
+        "lib/netstandard1.6/FluentAssertions.xml",
+        "lib/netstandard2.0/FluentAssertions.dll",
+        "lib/netstandard2.0/FluentAssertions.pdb",
+        "lib/netstandard2.0/FluentAssertions.xml"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -8906,22 +8986,41 @@
         "selenium.chrome.webdriver.nuspec"
       ]
     },
-    "Selenium.WebDriver/4.0.0-alpha01": {
-      "sha512": "jv6xU5paNsVFbM60NQkkHkOTxSjlmvQY+I0BCew6cJaKAeeDkVT44l3huSv7Qs1cRWM67mMIn/z+eQrBNZ4jxA==",
+    "Selenium.Support/3.141.0": {
+      "sha512": "F4sxMCXGyqWtbw5qsniJRgza2UsBnslHwFgNA2p7hPxvJhqg73lyXu/ZscJ7FSfRvq3eJrosysv92+4sZ3vWsg==",
       "type": "package",
-      "path": "selenium.webdriver/4.0.0-alpha01",
+      "path": "selenium.support/3.141.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "lib/net35/WebDriver.Support.dll",
+        "lib/net35/WebDriver.Support.xml",
+        "lib/net40/WebDriver.Support.dll",
+        "lib/net40/WebDriver.Support.xml",
+        "lib/net45/WebDriver.Support.dll",
+        "lib/net45/WebDriver.Support.xml",
+        "lib/netstandard2.0/WebDriver.Support.dll",
+        "lib/netstandard2.0/WebDriver.Support.xml",
+        "selenium.support.3.141.0.nupkg.sha512",
+        "selenium.support.nuspec"
+      ]
+    },
+    "Selenium.WebDriver/3.141.0": {
+      "sha512": "wPqzXO3f79DzqauTZSzLMKiaBCN0Z2Mv7KvWP+hnV6EL88zh/pJJnFtdIR1X5wa3hsTOpF/bBJs45rz7kArsiA==",
+      "type": "package",
+      "path": "selenium.webdriver/3.141.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/WebDriver.dll",
+        "lib/net35/WebDriver.xml",
+        "lib/net40/WebDriver.dll",
+        "lib/net40/WebDriver.xml",
         "lib/net45/WebDriver.dll",
         "lib/net45/WebDriver.xml",
-        "lib/net46/WebDriver.dll",
-        "lib/net46/WebDriver.xml",
-        "lib/net47/WebDriver.dll",
-        "lib/net47/WebDriver.xml",
         "lib/netstandard2.0/WebDriver.dll",
         "lib/netstandard2.0/WebDriver.xml",
-        "selenium.webdriver.4.0.0-alpha01.nupkg.sha512",
+        "selenium.webdriver.3.141.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
       ]
     },
@@ -9546,6 +9645,27 @@
         "ref/xamarinwatchos10/_._",
         "system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
         "system.componentmodel.typeconverter.nuspec"
+      ]
+    },
+    "System.Configuration.ConfigurationManager/4.4.0": {
+      "sha512": "gWwQv/Ug1qWJmHCmN17nAbxJYmQBM/E94QxKLksvUiiKB1Ld3Sc/eK1lgmbSjDFxkQhVuayI/cGFZhpBSodLrg==",
+      "type": "package",
+      "path": "system.configuration.configurationmanager/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Configuration.ConfigurationManager.dll",
+        "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "ref/net461/System.Configuration.ConfigurationManager.dll",
+        "ref/net461/System.Configuration.ConfigurationManager.xml",
+        "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "ref/netstandard2.0/System.Configuration.ConfigurationManager.xml",
+        "system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+        "system.configuration.configurationmanager.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Console/4.3.0": {
@@ -12642,6 +12762,47 @@
         "system.security.cryptography.primitives.nuspec"
       ]
     },
+    "System.Security.Cryptography.ProtectedData/4.4.0": {
+      "sha512": "cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog==",
+      "type": "package",
+      "path": "system.security.cryptography.protecteddata/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Security.Cryptography.ProtectedData.dll",
+        "ref/net461/System.Security.Cryptography.ProtectedData.dll",
+        "ref/net461/System.Security.Cryptography.ProtectedData.xml",
+        "ref/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/net46/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
+        "system.security.cryptography.protecteddata.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Security.Cryptography.X509Certificates/4.3.0": {
       "sha512": "t2Tmu6Y2NtJ2um0RtcuhP7ZdNNxXEgUm2JeoA/0NvlMjAhKCnM1NX07TDl3244mVp3QU6LPEhT3HTtH1uF7IYw==",
       "type": "package",
@@ -13871,6 +14032,7 @@
     ".NETCoreApp,Version=v2.2": [
       "Acebook >= 1.0.0",
       "FakeItEasy >= 5.1.1",
+      "FluentAssertions >= 5.7.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Mvc.Abstractions >= 2.2.0",
       "Microsoft.AspNetCore.Mvc.ViewFeatures >= 2.2.0",
@@ -13878,29 +14040,30 @@
       "Microsoft.NETCore.App >= 2.2.0",
       "NUnit3TestAdapter >= 3.11.0",
       "Selenium.Chrome.WebDriver >= 74.0.0",
-      "Selenium.WebDriver >= 4.0.0-alpha01",
+      "Selenium.Support >= 3.141.0",
+      "Selenium.WebDriver >= 3.141.0",
       "coverlet.msbuild >= 2.6.2",
       "nunit >= 3.11.0"
     ]
   },
   "packageFolders": {
-    "/Users/student/.nuget/packages/": {},
+    "/Users/linna@paddle.com/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/student/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj",
+      "projectUniqueName": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj",
       "projectName": "Acebook.Tests",
-      "projectPath": "/Users/student/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj",
-      "packagesPath": "/Users/student/.nuget/packages/",
-      "outputPath": "/Users/student/acebook-sharpies/Acebook.Tests/obj/",
+      "projectPath": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj",
+      "packagesPath": "/Users/linna@paddle.com/.nuget/packages/",
+      "outputPath": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook.Tests/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/student/.nuget/NuGet/NuGet.Config"
+        "/Users/linna@paddle.com/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
@@ -13911,8 +14074,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "/Users/student/acebook-sharpies/Acebook/Acebook.csproj": {
-              "projectPath": "/Users/student/acebook-sharpies/Acebook/Acebook.csproj"
+            "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/Acebook.csproj": {
+              "projectPath": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/Acebook.csproj"
             }
           }
         }
@@ -13929,6 +14092,10 @@
           "FakeItEasy": {
             "target": "Package",
             "version": "[5.1.1, )"
+          },
+          "FluentAssertions": {
+            "target": "Package",
+            "version": "[5.7.0, )"
           },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
@@ -13962,9 +14129,13 @@
             "target": "Package",
             "version": "[74.0.0, )"
           },
+          "Selenium.Support": {
+            "target": "Package",
+            "version": "[3.141.0, )"
+          },
           "Selenium.WebDriver": {
             "target": "Package",
-            "version": "[4.0.0-alpha01, )"
+            "version": "[3.141.0, )"
           },
           "coverlet.msbuild": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

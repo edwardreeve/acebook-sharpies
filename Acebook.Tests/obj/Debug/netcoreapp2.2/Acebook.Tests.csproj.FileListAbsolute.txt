@@ -17,3 +17,9 @@
 /Users/student/acebook-sharpies/Acebook.Tests/obj/Debug/netcoreapp2.2/Acebook.Tests.csproj.CopyComplete
 /Users/student/acebook-sharpies/Acebook.Tests/obj/Debug/netcoreapp2.2/Acebook.Tests.dll
 /Users/student/acebook-sharpies/Acebook.Tests/obj/Debug/netcoreapp2.2/Acebook.Tests.pdb
+/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook.Tests/obj/Debug/netcoreapp2.2/Acebook.Tests.csprojAssemblyReference.cache
+/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook.Tests/obj/Debug/netcoreapp2.2/Acebook.Tests.csproj.CoreCompileInputs.cache
+/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook.Tests/obj/Debug/netcoreapp2.2/Acebook.Tests.AssemblyInfoInputs.cache
+/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook.Tests/obj/Debug/netcoreapp2.2/Acebook.Tests.AssemblyInfo.cs
+/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook.Tests/obj/Debug/netcoreapp2.2/Acebook.Tests.dll
+/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook.Tests/obj/Debug/netcoreapp2.2/Acebook.Tests.pdb

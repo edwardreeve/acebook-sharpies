@@ -1,18 +1,25 @@
+using System;
+using FluentAssertions;
 using NUnit.Framework;
-// using Acebook.Models;
+using NUnit.Framework.Internal;
+using OpenQA.Selenium;
 using Acebook.Controllers;
 
 namespace Acebook.Controllers.NunitTests
 {
+    [TestFixture]
     public class HomeControllerTests
     {
         private HomeController _controller;
+        private IWebDriver _driver;
+        private string _baseUrl;
 
         [SetUp]
         public void Setup()
         {
-            // // _context = new AcebookContext();
-            // _controller = new HomeController();
+            _driver = new RemoteWebDriver();
+            // IWebDriver driver = new SafariDriver();
+            _baseUrl = "/";
         }
 
         [Test]
