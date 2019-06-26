@@ -11,15 +11,14 @@ namespace Acebook.Controllers.NunitTests
     [TestFixture]
     public class HomeControllerTests
     {
-        private HomeController _controller;
         private IWebDriver _driver;
         private string _baseUrl;
 
         [SetUp]
         public void Setup()
         {
-            IWebDriver driver = new FirefoxDriver();
-            _baseUrl = "/";
+            IWebDriver _driver = new FirefoxDriver();
+            _baseUrl = this._driver.Url;
         }
 
         [Test]
@@ -27,6 +26,18 @@ namespace Acebook.Controllers.NunitTests
         {
             _driver.Navigate().GoToUrl(_baseUrl);
             _driver.PageSource.Should().Contain("Acebook");
+        }
+
+        [TearDown]
+        public void Cleanup()
+        {
+            if (this._driver == null)
+            {
+                return;
+            }
+
+            this._driver.Close();
+            this._driver.Quit();
         }
     }
 }
