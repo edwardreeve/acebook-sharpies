@@ -10,6 +10,13 @@ namespace Acebook.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly AcebookContext _context;
+
+        public HomeController (AcebookContext context)         
+        {             
+            _context = context;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -18,6 +25,20 @@ namespace Acebook.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+        
+        public IActionResult Signup()
+        {
+            return View();
+        }
+        
+        [HttpPost]
+        public async Task<ActionResult<User>> PostUser(User user)
+        {
+            _context.User.Add(user);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetById), new { id = user.Id }, user);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -148,3 +148,4 @@ acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Acebook.csproj.CopyComplete
 /Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Acebook.dll
 /Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Acebook.pdb
 /Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Acebook.csproj.CopyComplete
+/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Razor/Views/Home/Signup.g.cshtml.cs
