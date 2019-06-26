@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj": {}
+    "/Users/student/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj": {}
   },
   "projects": {
-    "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj": {
+    "/Users/student/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj",
+        "projectUniqueName": "/Users/student/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj",
         "projectName": "Acebook.Tests",
-        "projectPath": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj",
-        "packagesPath": "/Users/linna@paddle.com/.nuget/packages/",
-        "outputPath": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook.Tests/obj/",
+        "projectPath": "/Users/student/acebook-sharpies/Acebook.Tests/Acebook.Tests.csproj",
+        "packagesPath": "/Users/student/.nuget/packages/",
+        "outputPath": "/Users/student/acebook-sharpies/Acebook.Tests/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/linna@paddle.com/.nuget/NuGet/NuGet.Config"
+          "/Users/student/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -28,8 +28,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/Acebook.csproj": {
-                "projectPath": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/Acebook.csproj"
+              "/Users/student/acebook-sharpies/Acebook/Acebook.csproj": {
+                "projectPath": "/Users/student/acebook-sharpies/Acebook/Acebook.csproj"
               }
             }
           }
@@ -46,6 +46,10 @@
             "FakeItEasy": {
               "target": "Package",
               "version": "[5.1.1, )"
+            },
+            "FluentAssert": {
+              "target": "Package",
+              "version": "(, )"
             },
             "FluentAssertions": {
               "target": "Package",
@@ -67,7 +71,7 @@
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[15.9.0, )"
+              "version": "[16.1.1, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
@@ -77,7 +81,7 @@
             },
             "NUnit3TestAdapter": {
               "target": "Package",
-              "version": "[3.11.0, )"
+              "version": "[3.13.0, )"
             },
             "Selenium.Chrome.WebDriver": {
               "target": "Package",
@@ -89,7 +93,7 @@
             },
             "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[3.141.0, )"
+              "version": "[4.0.0-alpha01, )"
             },
             "coverlet.msbuild": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -110,20 +114,20 @@
         }
       }
     },
-    "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/Acebook.csproj": {
+    "/Users/student/acebook-sharpies/Acebook/Acebook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/Acebook.csproj",
+        "projectUniqueName": "/Users/student/acebook-sharpies/Acebook/Acebook.csproj",
         "projectName": "Acebook",
-        "projectPath": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/Acebook.csproj",
-        "packagesPath": "/Users/linna@paddle.com/.nuget/packages/",
-        "outputPath": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/obj/",
+        "projectPath": "/Users/student/acebook-sharpies/Acebook/Acebook.csproj",
+        "packagesPath": "/Users/student/.nuget/packages/",
+        "outputPath": "/Users/student/acebook-sharpies/Acebook/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/linna@paddle.com/.nuget/NuGet/NuGet.Config"
+          "/Users/student/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -162,6 +166,10 @@
               "version": "[2.2.0, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
             "NpgSql.EntityFrameworkCore.PostgreSQL.Design": {
               "target": "Package",
               "version": "[1.1.1, )"
@@ -176,7 +184,7 @@
             },
             "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[3.141.0, )"
+              "version": "[4.0.0-alpha01, )"
             }
           },
           "imports": [

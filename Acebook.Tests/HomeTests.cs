@@ -3,6 +3,7 @@ using FluentAssertions;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
 using Acebook.Controllers;
 
 namespace Acebook.Controllers.NunitTests
@@ -17,15 +18,15 @@ namespace Acebook.Controllers.NunitTests
         [SetUp]
         public void Setup()
         {
-            _driver = new RemoteWebDriver();
-            // IWebDriver driver = new SafariDriver();
+            IWebDriver driver = new FirefoxDriver();
             _baseUrl = "/";
         }
 
         [Test]
-        public void Test1()
+        public void HomePageShowsAcebook()
         {
-            Assert.Pass();
+            _driver.Navigate().GoToUrl(_baseUrl);
+            _driver.PageSource.Should().Contain("Acebook");
         }
     }
 }
