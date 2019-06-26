@@ -7,7 +7,7 @@ using Acebook.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Acebook.Controllers {
-    [Route ("[controller]")]
+
     public class HomeController : Controller {
         private readonly AcebookContext _context;
         public HomeController (AcebookContext context) {
@@ -18,6 +18,18 @@ namespace Acebook.Controllers {
         public IActionResult Index () {
             List<Post> posts = _context.Post.OrderByDescending (x => x.CreatedAt).ToList ();
             return View (posts);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> CreatePost(string body, long userId = 1)
+        {
+            Post post = new Post();
+            Post newPost = post.CreatePost(body, userId);
+
+            _context.Post.Add(newPost);
+            await _context.SaveChangesAsync();
+
+            return Redirect("/");
         }
 
         public IActionResult Privacy () {
