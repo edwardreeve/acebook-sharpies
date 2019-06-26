@@ -32,13 +32,13 @@ namespace Acebook.Controllers
             return View();
         }
         
-        [HttpPost]
-        public async Task<ActionResult<User>> PostUser(User user)
+        [HttpPost("post")]
+        public async Task<ActionResult<string>> PostUser(User user)
         {
             _context.User.Add(user);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetById), new { id = user.Id }, user);
+            return "Welcome!";
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
