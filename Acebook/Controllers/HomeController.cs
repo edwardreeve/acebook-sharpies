@@ -56,7 +56,7 @@ namespace Acebook.Controllers
         {
             string inputEmail = user.Email;
             string inputPassword = user.Password;
-            User validUser = _context.User.Where(u => u.Email == inputEmail).First();
+            User validUser = _context.User.Where(u => u.Email == inputEmail).FirstOrDefault();
             if(validUser != null) {
                 bool verifiedPass = BCrypt.Net.BCrypt.Verify(inputPassword, validUser.Password);
                 if(verifiedPass) {
@@ -67,12 +67,12 @@ namespace Acebook.Controllers
                 }
                 else 
                 {
-
+                    return "Password failed";
                 }
-                return verifiedPass.ToString();
             } 
-            else {
-return "hi";
+            else 
+            {
+                return "User email is invalid";
             }
         }
 
