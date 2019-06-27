@@ -8,15 +8,6 @@
     <h1 class="display-4">Welcome Sharpies</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building top-notch Shoobie Doobie Web apps with ASP.NET Core</a>.</p>
 
-    <ul>
-    @foreach(var item in Model) 
-    {
-        <li><span>@item.Body</span> <span>@item.CreatedAt</span></li>  
-    }
-    </ul>
-
-    <br />
-
     <form action='@url' method="post">
         <div class="container">
             <label for="content"><b>Post </b></label>
@@ -26,4 +17,26 @@
             </div>
         </div>
     </form>
+
+    
+    @foreach(var item in Model) 
+    {
+        <div class="card mt-3">
+                  <div class="card-header">
+                  <div class="text-center">
+                   <!-- ${response[i]['user']['handle']} -->
+                  </div>
+                  </div>
+                <div class="card-body">
+                <div class="text-center">
+                  <blockquote class="blockquote mb-0">
+                   <p>@item.Body</p>
+                   <footer class="blockquote-footer">Posted at @item.CreatedAt</footer>
+                  </blockquote>
+                </div>
+                </div>
+                </div>
+    }
+    <br />
+
 </div>
