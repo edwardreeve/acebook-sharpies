@@ -1,4 +1,7 @@
-﻿@model IEnumerable<Acebook.Models.Post>
+﻿Index.cshtml
+
+
+@model IEnumerable<Acebook.Models.Post>
 @{
     ViewData["Title"] = "Home Page";
     var url = @Url.Action("CreatePost", "Home");
@@ -12,7 +15,11 @@
     @foreach(var item in Model) 
     {
         <li>
-            <span>@item.Body</span> <span>@item.CreatedAt</span>            
+            <span>@item.Body</span> <span>@item.CreatedAt</span>
+            <form action='delete' method='post'>
+                <a>Delete</a>
+            </form>
+            
         </li>  
     }
     </ul>
@@ -53,3 +60,4 @@
     </div>
     </div>
 </div>
+

@@ -76,6 +76,14 @@ namespace Acebook.Controllers
             }
         }
 
+        // [HttpDelete("{id}")]
+        //    public async Task<ActionResult<string>> Delete(long id) {
+        //    var item = _context.Post.Find(id);
+        //    _context.Post.Remove(item);
+        //    await _context.SaveChangesAsync();
+        //    return "Successfully deleted";
+        // }
+
         [ResponseCache (Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error () {
             return View (new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
