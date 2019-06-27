@@ -81,7 +81,7 @@ namespace Acebook.Controllers
            var item = _context.Post.Find(id);
            _context.Post.Remove(item);
            await _context.SaveChangesAsync();
-           return "Successfully deleted";
+           return "Post has been successfully deleted";
         }
 
         [ResponseCache (Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
