@@ -51,6 +51,16 @@ namespace Acebook.Controllers {
             return "Welcome!";
         }
 
+        [HttpPost]
+        public async Task<ActionResult> CreateComment(Comment comment)
+        {
+            comment.CreatedAt = DateTime.Now;
+            _context.Comment.Add(comment);
+            await _context.SaveChangesAsync();
+
+            return Redirect("/");
+        }
+
         [ResponseCache (Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error () {
             return View (new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

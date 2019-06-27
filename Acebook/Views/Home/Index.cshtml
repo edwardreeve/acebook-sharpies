@@ -44,8 +44,10 @@
                             <div class="container">
                                 <label for="content"><b>Post </b></label>
                                 <input type="text" placeholder="comment" style="text-align: center" name="body" required>
+                                <input type="hidden" name="postId" value=@item.Id required>
+                                <input type="hidden" name="userId" value=@item.UserId required>
                                 <div class="clearfix">
-                                    <button type="submit" class="postbtn">post</button>
+                                    <button type="submit" class="postbtn">comment</button>
                                 </div>
                             </div>
                         </form>
