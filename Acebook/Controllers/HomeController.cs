@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Acebook.Models;
 using Microsoft.AspNetCore.Mvc;
-using BCrypt.Net;
 
-namespace Acebook.Controllers {
+namespace Acebook.Controllers
+{
     public class HomeController : Controller {
         private readonly AcebookContext _context;
         public HomeController (AcebookContext context) {
@@ -59,13 +58,19 @@ namespace Acebook.Controllers {
             User validUser = _context.User.Where(u => u.Email == inputEmail).First();
             if(validUser != null) {
                 bool verifiedPass = BCrypt.Net.BCrypt.Verify(inputPassword, validUser.Password);
+                if(verifiedPass) {
+                    Session["userId"] = validUser.Id;
+                    return Redirect("/");
+                }
+                else 
+                {
+
+                }
                 return verifiedPass.ToString();
             } 
             else {
 
             }
-
-            return Redirect("/");
         }
 
         [ResponseCache (Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
