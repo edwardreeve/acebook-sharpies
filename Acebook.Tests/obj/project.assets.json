@@ -3202,7 +3202,7 @@
           "lib/netstandard1.3/Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll": {}
         }
       },
-      "NUnit/3.11.0": {
+      "NUnit/3.12.0": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "2.0.0"
@@ -3220,7 +3220,7 @@
       "NUnit.Snippets/1.11.0": {
         "type": "package"
       },
-      "NUnit3TestAdapter/3.11.0": {
+      "NUnit3TestAdapter/3.12.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.DotNet.InternalAbstractions": "1.0.0",
@@ -8756,10 +8756,10 @@
         "npgsql.entityframeworkcore.postgresql.design.nuspec"
       ]
     },
-    "NUnit/3.11.0": {
-      "sha512": "BzGk+u02RCrysmLlSzD+okxzMQ8JRF4eFC/qijDJ8Y/FBdTrTkxkQyTFsYkG1o++pr7QpFAE4VDXDqIfZ/gBAg==",
+    "NUnit/3.12.0": {
+      "sha512": "3oJTrcUcT9wmweBUwgUf0f1XIYy6RZq2ziV+RM95HMKAJGsHPN2i3MKK1dAPvDPMRLz799Llj4eyu/STB9Q7OA==",
       "type": "package",
-      "path": "nunit/3.11.0",
+      "path": "nunit/3.12.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8767,10 +8767,6 @@
         "LICENSE.txt",
         "NOTICES.txt",
         "build/NUnit.props",
-        "lib/net20/NUnit.System.Linq.dll",
-        "lib/net20/nunit.framework.dll",
-        "lib/net20/nunit.framework.pdb",
-        "lib/net20/nunit.framework.xml",
         "lib/net35/nunit.framework.dll",
         "lib/net35/nunit.framework.pdb",
         "lib/net35/nunit.framework.xml",
@@ -8786,7 +8782,7 @@
         "lib/netstandard2.0/nunit.framework.dll",
         "lib/netstandard2.0/nunit.framework.pdb",
         "lib/netstandard2.0/nunit.framework.xml",
-        "nunit.3.11.0.nupkg.sha512",
+        "nunit.3.12.0.nupkg.sha512",
         "nunit.nuspec"
       ]
     },
@@ -8880,10 +8876,10 @@
         "tools/uninstall.ps1_bak"
       ]
     },
-    "NUnit3TestAdapter/3.11.0": {
-      "sha512": "Ae4UL0lBn09Wvr6hsF3VmiBtKdaJlfpc+KIfjd4ukUzEipltjl9vKs7k0og+s83Di0E20dT/T5zbFw/Axkn9jA==",
+    "NUnit3TestAdapter/3.12.0": {
+      "sha512": "uN7IiBCNxLHVXobqyCZvtRwkbnVclA01cNOrHV3noGOhAG5fX8zCjy053U77hILpX/b9eGRgzdZDj4Xm0TnlGw==",
       "type": "package",
-      "path": "nunit3testadapter/3.11.0",
+      "path": "nunit3testadapter/3.12.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8897,7 +8893,7 @@
         "build/netcoreapp1.0/NUnit3.TestAdapter.pdb",
         "build/netcoreapp1.0/NUnit3TestAdapter.props",
         "build/netcoreapp1.0/nunit.engine.netstandard.dll",
-        "nunit3testadapter.3.11.0.nupkg.sha512",
+        "nunit3testadapter.3.12.0.nupkg.sha512",
         "nunit3testadapter.nuspec"
       ]
     },
@@ -14192,9 +14188,9 @@
       "Microsoft.AspNetCore.Mvc.ViewFeatures >= 2.2.0",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.2.0",
-      "NUnit3TestAdapter >= 3.11.0",
+      "NUnit3TestAdapter >= 3.12.0",
       "coverlet.msbuild >= 2.6.2",
-      "nunit >= 3.11.0"
+      "nunit >= 3.12.0"
     ]
   },
   "packageFolders": {
@@ -14270,7 +14266,7 @@
           },
           "NUnit3TestAdapter": {
             "target": "Package",
-            "version": "[3.11.0, )"
+            "version": "[3.12.0, )"
           },
           "coverlet.msbuild": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -14280,7 +14276,7 @@
           },
           "nunit": {
             "target": "Package",
-            "version": "[3.11.0, )"
+            "version": "[3.12.0, )"
           }
         },
         "imports": [
@@ -14308,15 +14304,6 @@
       "warningLevel": 1,
       "message": "Package 'Microsoft.AspNet.Razor 3.2.7' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.AspNet.Razor",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Detected package downgrade: NUnit from 3.12.0 to 3.11.0. Reference the package directly from the project to select a different version. \n Acebook.Tests -> Acebook -> NUnit (>= 3.12.0) \n Acebook.Tests -> NUnit (>= 3.11.0)",
-      "libraryId": "NUnit",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.2"
       ]
