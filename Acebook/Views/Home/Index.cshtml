@@ -13,8 +13,8 @@
         <div class="container">
             <label for="content"><b>Post </b></label>
             <input type="text" placeholder="message" style="text-align: center" name="body" required>
+            <button type="submit" class="btn btn-primary postbtn">post</button>
             <div class="clearfix">
-                <button type="submit" class="postbtn">post</button>
             </div>
         </div>
     </form>
@@ -44,7 +44,14 @@
                         {
                             if (comment.postId == item.Id)
                                 {
-                                    <li>@comment.Body</li>
+                                <div class="list-group">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">User name will display here</h6>
+                                        <small>@comment.CreatedAt</small>
+                                    </div>
+                                    <p class="mb-1">@comment.Body</p>
+                                    <hr>
+                                </div>
                                 }
                         }
                         <form action='@urlAddComment' method="post">
@@ -53,8 +60,8 @@
                                 <input type="text" placeholder="comment" style="text-align: center" name="body" required>
                                 <input type="hidden" name="postId" value=@item.Id required>
                                 <input type="hidden" name="userId" value=@item.UserId required>
+                                <button type="submit" class="btn btn-primary postbtn" data-toggle="collapse" data-target=@dataTarget>comment</button>
                                 <div class="clearfix">
-                                    <button type="submit" class="postbtn">comment</button>
                                 </div>
                             </div>
                         </form>
