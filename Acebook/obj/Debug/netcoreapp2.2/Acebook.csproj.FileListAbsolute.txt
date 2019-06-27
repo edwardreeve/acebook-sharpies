@@ -181,3 +181,4 @@ acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Acebook.csproj.CopyComplete
 /Users/student/group_projects/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Acebook.Views.pdb
 /Users/student/group_projects/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Acebook.csproj.CopyComplete
 /Users/student/Documents/cSharp/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Razor/Views/Home/Signup.g.cshtml.cs
+/Users/edreeve/makers/projects/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Razor/Views/Home/Signup.g.cshtml.cs

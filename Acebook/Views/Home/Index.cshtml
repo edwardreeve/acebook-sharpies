@@ -24,6 +24,7 @@
     {
         string dataTarget = "#collapse" + item.Id;
         string divId ="collapse" + item.Id;
+
         <div id="accordion">
             <div class="card mt-3" id=@item.Id>
                 <div class="card-header">
@@ -37,7 +38,7 @@
                         Comments
                     </button>
                 </div>
-                 <div id=@divId class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                 <div id=@divId class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
                          <form action='@urlAddComment' method="post">
                             <div class="container">
