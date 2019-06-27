@@ -6,20 +6,19 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome Sharpies</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building top-notch Shoobie Doobie Web apps with ASP.NET Core</a>.</p>
+    <h2 class="display-4">News Feed</h2>
 
     <form action='@url' method="post">
         <div class="container">
-            <label for="content"><b>Post </b></label>
-            <input type="text" placeholder="message" style="text-align: center" name="body" required>
+            <!-- <label for="content"><b>Post </b></label> -->
+            <input type="text" width=30px placeholder="Add message" style="text-align: center" name="body" required>
             <button type="submit" class="btn btn-primary postbtn">post</button>
             <div class="clearfix">
             </div>
         </div>
     </form>
 
-    
+    <div class="flex-container justify-content-center">
     @foreach(var item in ViewData["Posts"] as IEnumerable<Acebook.Models.Post>)
     {
         string dataTarget = "#collapse" + item.Id;
@@ -27,13 +26,11 @@
 
         <div id="accordion">
             <div class="card mt-3" id=@item.Id>
-                <div class="card-header">
-                    <div class="text-center">
-                        <blockquote class="blockquote mb-0">
-                            <p>@item.Body</p>
-                            <footer class="blockquote-footer">Posted at @item.CreatedAt</footer>
-                        </blockquote>
-                    </div>
+                <div class="card-header text-center">
+                    <blockquote class="blockquote mb-0">
+                        <p class="postBody">@item.Body</p>
+                        <footer class="blockquote-footer">Posted at @item.CreatedAt</footer>
+                    </blockquote>
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target=@dataTarget aria-expanded="false" aria-controls=@divId>
                         Comments
                     </button>
@@ -44,23 +41,22 @@
                         {
                             if (comment.postId == item.Id)
                                 {
-                                <div class="list-group">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-1">User name will display here</h6>
-                                        <small>@comment.CreatedAt</small>
+                                    <div class="list-group">
+                                        <div class="d-flex w-60 justify-content-between list-group-item list-group-item-action flex-column align-items-start active">
+                                        <h6 class="mb-1 text-center" style="text-align: center">@comment.Body</h6>
+                                        </div>
+                                        <h6 class="mb-1"><small>User name will display here - @comment.CreatedAt</small></h6>
+                                        <br>
                                     </div>
-                                    <p class="mb-1">@comment.Body</p>
-                                    <hr>
-                                </div>
                                 }
                         }
                         <form action='@urlAddComment' method="post">
                             <div class="container">
-                                <label for="content"><b>Post </b></label>
+                                <!-- <label for="content"><b>Post </b></label> -->
                                 <input type="text" placeholder="comment" style="text-align: center" name="body" required>
                                 <input type="hidden" name="postId" value=@item.Id required>
                                 <input type="hidden" name="userId" value=@item.UserId required>
-                                <button type="submit" class="btn btn-primary postbtn" data-toggle="collapse" data-target=@dataTarget>comment</button>
+                                <button type="submit" class="btn btn-primary postbtn" data-toggle="collapse" data-target=@dataTarget>Add comment</button>
                                 <div class="clearfix">
                                 </div>
                             </div>
@@ -71,6 +67,7 @@
         </div>
 
     }
+    </div>
     <br />
 
 </div>
