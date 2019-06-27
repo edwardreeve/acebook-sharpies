@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Acebook.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using Microsoft.AspNetCore.Http;
 
 namespace Acebook.Controllers
 {
@@ -17,6 +18,8 @@ namespace Acebook.Controllers
         [HttpGet]
         public IActionResult Index () {
             List<Post> posts = _context.Post.OrderByDescending (x => x.CreatedAt).ToList ();
+
+            GetUserSession();
             return View (posts);
         }
 
@@ -33,11 +36,13 @@ namespace Acebook.Controllers
         }
 
         public IActionResult Privacy () {
+            GetUserSession();
             return View ();
         }
         
         public IActionResult Signup()
         {
+            GetUserSession();
             return View();
         }
         
@@ -57,12 +62,13 @@ namespace Acebook.Controllers
             string inputEmail = user.Email;
             string inputPassword = user.Password;
             User validUser = _context.User.Where(u => u.Email == inputEmail).FirstOrDefault();
+            
             if(validUser != null) {
                 bool verifiedPass = BCrypt.Net.BCrypt.Verify(inputPassword, validUser.Password);
-                if(verifiedPass) {
-                    byte[] bytes = BitConverter.GetBytes(validUser.Id); 
-                    HttpContext.Session.Set("userId", bytes);
-                    long theId = BitConverter.ToInt64(bytes);
+                
+                if(verifiedPass) { 
+                    HttpContext.Session.SetString("userId", validUser.Id.ToString());
+                    HttpContext.Session.SetString("userName", validUser.Name);
                     return Redirect("/");
                 }
                 else 
@@ -74,6 +80,14 @@ namespace Acebook.Controllers
             {
                 return "User email is invalid";
             }
+        }
+
+        public void GetUserSession()
+        {
+            long userId = Convert.ToInt64(HttpContext.Session.GetString("userId"));
+            string userName = HttpContext.Session.GetString("userName");
+            ViewBag.SessionUserId = userId;
+            ViewBag.SessionUser = userName;
         }
 
         [ResponseCache (Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
