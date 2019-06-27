@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Home Page";
     var url = @Url.Action("CreatePost", "Home");
+    var urlAddComment = @Url.Action("CreateComment","Home");
 }
 
 <div class="text-center">
@@ -21,21 +22,37 @@
     
     @foreach(var item in Model) 
     {
-        <div class="card mt-3">
-                  <div class="card-header">
-                  <div class="text-center">
-                   <!-- ${response[i]['user']['handle']} -->
-                  </div>
-                  </div>
-                <div class="card-body">
-                <div class="text-center">
-                  <blockquote class="blockquote mb-0">
-                   <p>@item.Body</p>
-                   <footer class="blockquote-footer">Posted at @item.CreatedAt</footer>
-                  </blockquote>
+        string dataTarget = "#collapse" + item.Id;
+        string divId ="collapse" + item.Id;
+        <div id="accordion">
+            <div class="card mt-3" id=@item.Id>
+                <div class="card-header">
+                    <div class="text-center">
+                        <blockquote class="blockquote mb-0">
+                            <p>@item.Body</p>
+                            <footer class="blockquote-footer">Posted at @item.CreatedAt</footer>
+                        </blockquote>
+                    </div>
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target=@dataTarget aria-expanded="false" aria-controls=@divId>
+                        Comments
+                    </button>
                 </div>
+                 <div id=@divId class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                         <form action='@urlAddComment' method="post">
+                            <div class="container">
+                                <label for="content"><b>Post </b></label>
+                                <input type="text" placeholder="comment" style="text-align: center" name="body" required>
+                                <div class="clearfix">
+                                    <button type="submit" class="postbtn">post</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                </div>
+            </div>
+        </div>
+
     }
     <br />
 
