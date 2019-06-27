@@ -69,7 +69,7 @@ body {
   line-height: 1.5;
   color: #888;
   text-align: left;
-  background-color: rgb(247, 242, 242);
+  background-color: rgb(250, 246, 246);
   padding-top: 60px;
 }
 
@@ -4926,7 +4926,7 @@ input[type="button"].btn-block {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: #cce7e0;
+  background-color: rgba(0, 0, 0, 0.082);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
