@@ -2948,6 +2948,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views/Home/Signup.cshtml",
+      "TargetPath": "Views/Home/Signup.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/Shared/_CookieConsentPartial.cshtml",
       "TargetPath": "Views/Shared/_CookieConsentPartial.cshtml",
       "FileKind": "mvc"
