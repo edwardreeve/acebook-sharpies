@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Acebook.Models.Post>
+﻿
 @{
     ViewData["Title"] = "Home Page";
     var url = @Url.Action("CreatePost", "Home");
@@ -20,7 +20,7 @@
     </form>
 
     
-    @foreach(var item in Model) 
+    @foreach(var item in ViewData["Posts"] as IEnumerable<Acebook.Models.Post>)
     {
         string dataTarget = "#collapse" + item.Id;
         string divId ="collapse" + item.Id;
@@ -40,6 +40,13 @@
                 </div>
                  <div id=@divId class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
+                        @foreach(var comment in ViewData["Comments"] as IEnumerable<Acebook.Models.Comment>)
+                        {
+                            if (comment.postId == item.Id)
+                                {
+                                    <li>@comment.Body</li>
+                                }
+                        }
                         <form action='@urlAddComment' method="post">
                             <div class="container">
                                 <label for="content"><b>Post </b></label>
