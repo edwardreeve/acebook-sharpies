@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Acebook.Models;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace Acebook.Controllers
 {
@@ -59,7 +60,9 @@ namespace Acebook.Controllers
             if(validUser != null) {
                 bool verifiedPass = BCrypt.Net.BCrypt.Verify(inputPassword, validUser.Password);
                 if(verifiedPass) {
-                    Session["userId"] = validUser.Id;
+                    byte[] bytes = BitConverter.GetBytes(validUser.Id); 
+                    HttpContext.Session.Set("userId", bytes);
+                    long theId = BitConverter.ToInt64(bytes);
                     return Redirect("/");
                 }
                 else 
@@ -69,7 +72,7 @@ namespace Acebook.Controllers
                 return verifiedPass.ToString();
             } 
             else {
-
+return "hi";
             }
         }
 
