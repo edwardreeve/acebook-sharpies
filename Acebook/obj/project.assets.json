@@ -12281,11 +12281,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/student/csharp/acebook-sharpies/Acebook/Acebook.csproj",
+      "projectUniqueName": "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/Acebook.csproj",
       "projectName": "Acebook",
-      "projectPath": "/Users/student/csharp/acebook-sharpies/Acebook/Acebook.csproj",
+      "projectPath": "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/Acebook.csproj",
       "packagesPath": "/Users/student/.nuget/packages/",
-      "outputPath": "/Users/student/csharp/acebook-sharpies/Acebook/obj/",
+      "outputPath": "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

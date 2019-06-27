@@ -52,13 +52,17 @@ namespace Acebook.Controllers {
         }
 
         [HttpPost("signin")]
-        public async Task<ActionResult<string>> SignIn(User user)
+        public ActionResult<string> SignIn(User user)
         {
             string inputEmail = user.Email;
             string inputPassword = user.Password;
-            User validUser = _context.User.Email.Find(inputEmail);
+            User validUser = _context.User.Where(u => u.Email == inputEmail).First();
             if(validUser != null) {
-                return "logged in";
+                bool verifiedPass = BCrypt.Net.BCrypt.Verify(inputPassword, validUser.Password);
+                return verifiedPass.ToString();
+            } 
+            else {
+
             }
 
             return Redirect("/");
