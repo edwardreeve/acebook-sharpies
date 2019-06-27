@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<Acebook.Models.Post>
 @{
     ViewData["Title"] = "Home Page";
+    var url = @Url.Action("CreatePost", "Home");
 }
 
 <div class="text-center">
@@ -13,4 +14,16 @@
         <li><span>@item.Body</span> <span>@item.CreatedAt</span></li>  
     }
     </ul>
+
+    <br />
+
+    <form action='@url' method="post">
+        <div class="container">
+            <label for="content"><b>Post </b></label>
+            <input type="text" placeholder="message" style="text-align: center" name="body" required>
+            <div class="clearfix">
+                <button type="submit" class="postbtn">post</button>
+            </div>
+        </div>
+    </form>
 </div>
