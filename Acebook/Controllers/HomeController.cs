@@ -107,9 +107,17 @@ namespace Acebook.Controllers
         }
         
         // [HttpDelete]
-          public async Task<ActionResult<string>> DeletePost(long id) {
+          public async Task<ActionResult> DeletePost(long id) {
             var item = _context.Post.Find(id);
             _context.Post.Remove(item);
+            await _context.SaveChangesAsync();
+            return Redirect ("/");
+        }
+
+        // [HttpPut]
+         public async Task<ActionResult> UpdatePost(long id, string body) {
+            var item = _context.Post.Find(id);
+            item.Body = body;
             await _context.SaveChangesAsync();
             return Redirect ("/");
         }

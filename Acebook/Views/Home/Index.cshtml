@@ -3,8 +3,8 @@
     ViewData["Title"] = "Home Page";
     var url = @Url.Action("CreatePost", "Home");
     var urlAddComment = @Url.Action("CreateComment","Home");
-    var urlDeletePost = @Url.Action("deletePost", "Home");
-
+    var urlDeletePost = @Url.Action("DeletePost", "Home");
+    var urlUpdatePost = @Url.Action("UpdatePost", "Home");
 }
 
 <div class="text-center">
@@ -36,6 +36,12 @@
                                 <form method='delete' action='@urlDeletePost'>
                                     <input type="hidden" value=@item.Id name="id" />
                                     <input type="submit" value="Delete" />
+                                </form>
+
+                                <form method='put' action='@urlUpdatePost'>
+                                    <input type="hidden" value=@item.Id name="id" />
+                                    <input type="text" name="body" placeholder="Update your post here..." />
+                                    <input type="submit" value="Update" />
                                 </form>
                             }
                         <footer class="blockquote-footer">Posted at @item.CreatedAt</footer>
