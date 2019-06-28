@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Dynamic;
 using System.Linq;
@@ -7,9 +6,11 @@ using System.Threading.Tasks;
 using Acebook.Models;
 using BCrypt.Net;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using Microsoft.AspNetCore.Http;
 
-
-namespace Acebook.Controllers {
+namespace Acebook.Controllers
+{
     public class HomeController : Controller {
         private readonly AcebookContext _context;
         public HomeController (AcebookContext context) {
@@ -22,16 +23,9 @@ namespace Acebook.Controllers {
             List<Comment> comments = _context.Comment.OrderBy (x => x.CreatedAt).ToList ();
             ViewData["Posts"] = posts;
             ViewData["Comments"] = comments;
+            GetUserSession();
             return View ();
         }
-
-        // [HttpGet]
-        // public IActionResult CommentList (long id) {
-        //     List<Comment> PostComments = _context.Comment.Where (c => c.postId == id).ToList ();
-        //     // List<Comment> comments = _context.Comment.OrderByDescending (x => x.CreatedAt).ToList ();
-        //     ViewData["Comments"] = PostComments;
-        //     return View ();
-        //  }
 
         [HttpPost]
         public async Task<ActionResult> CreatePost (string body, long userId = 1) {
@@ -45,11 +39,14 @@ namespace Acebook.Controllers {
         }
 
         public IActionResult Privacy () {
+            GetUserSession();
             return View ();
         }
-
-        public IActionResult Signup () {
-            return View ();
+        
+        public IActionResult Signup()
+        {
+            GetUserSession();
+            return View();
         }
 
         [HttpPost ("post")]
@@ -68,6 +65,40 @@ namespace Acebook.Controllers {
             await _context.SaveChangesAsync ();
 
             return Redirect ("/");
+        }
+
+        [HttpPost("signin")]
+        public ActionResult<string> SignIn(User user)
+        {
+            string inputEmail = user.Email;
+            string inputPassword = user.Password;
+            User validUser = _context.User.Where(u => u.Email == inputEmail).FirstOrDefault();
+            
+            if(validUser != null) {
+                bool verifiedPass = BCrypt.Net.BCrypt.Verify(inputPassword, validUser.Password);
+                
+                if(verifiedPass) { 
+                    HttpContext.Session.SetString("userId", validUser.Id.ToString());
+                    HttpContext.Session.SetString("userName", validUser.Name);
+                    return Redirect("/");
+                }
+                else 
+                {
+                    return "Password failed";
+                }
+            } 
+            else 
+            {
+                return "User email is invalid";
+            }
+        }
+
+        public void GetUserSession()
+        {
+            long userId = Convert.ToInt64(HttpContext.Session.GetString("userId"));
+            string userName = HttpContext.Session.GetString("userName");
+            ViewBag.SessionUserId = userId;
+            ViewBag.SessionUser = userName;
         }
 
         [ResponseCache (Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

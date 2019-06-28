@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/edreeve/makers/projects/acebook-sharpies/Acebook/Acebook.csproj": {}
+    "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/Acebook.csproj": {}
   },
   "projects": {
-    "/Users/edreeve/makers/projects/acebook-sharpies/Acebook/Acebook.csproj": {
+    "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/Acebook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/edreeve/makers/projects/acebook-sharpies/Acebook/Acebook.csproj",
+        "projectUniqueName": "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/Acebook.csproj",
         "projectName": "Acebook",
-        "projectPath": "/Users/edreeve/makers/projects/acebook-sharpies/Acebook/Acebook.csproj",
-        "packagesPath": "/Users/edreeve/.nuget/packages/",
-        "outputPath": "/Users/edreeve/makers/projects/acebook-sharpies/Acebook/obj/",
+        "projectPath": "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/Acebook.csproj",
+        "packagesPath": "/Users/student/.nuget/packages/",
+        "outputPath": "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/edreeve/.nuget/NuGet/NuGet.Config"
+          "/Users/student/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -43,6 +43,18 @@
               "target": "Package",
               "version": "[3.1.3, )"
             },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "FontAwesome": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "Microsoft.AspNet.Razor": {
+              "target": "Package",
+              "version": "[3.2.7, )"
+            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -60,6 +72,14 @@
               "version": "[2.2.0, )",
               "autoReferenced": true
             },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "NUnit.Snippets": {
+              "target": "Package",
+              "version": "[1.11.0, )"
+            },
             "NpgSql.EntityFrameworkCore.PostgreSQL.Design": {
               "target": "Package",
               "version": "[1.1.1, )"
@@ -67,6 +87,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[2.1.0, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[4.3.1, )"
             }
           },
           "imports": [
