@@ -12,8 +12,7 @@
 
     <form action='@url' method="post">
         <div class="container">
-            <!-- <label for="content"><b>Post </b></label> -->
-            <input type="text" width=30px placeholder="Add message" style="text-align: center" name="body" required>
+            <textarea col="20" row="10" placeholder="Add message" style="text-align: center" name="body" required></textarea><br>
             <button type="submit" class="btn btn-primary postbtn">post</button>
             <div class="clearfix">
             </div>
@@ -44,7 +43,15 @@
                                     <input type="submit" value="Delete" />
                                 </form>
                             }
-                        <footer class="blockquote-footer">Posted at @item.CreatedAt</footer>
+
+                        <footer class="blockquote-footer">Posted at @item.CreatedAt by @foreach(var user in ViewData["Users"] as IEnumerable<Acebook.Models.User>)
+                        {
+                            if (user.Id == item.UserId)
+                            {
+                               <span>@user.Name</span>;
+                            }
+                        }
+                        </footer>
                     </blockquote>
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target=@dataTarget aria-expanded="false" aria-controls=@divId>
                         Comments
@@ -60,7 +67,13 @@
                                         <div class="d-flex w-60 justify-content-between list-group-item list-group-item-action flex-column align-items-start active">
                                         <h6 class="mb-1 text-center" style="text-align: center">@comment.Body</h6>
                                         </div>
-                                        <h6 class="mb-1"><small>User name will display here - @comment.CreatedAt</small></h6>
+                                        <h6 class="mb-1"><small>@foreach(var commentUser in ViewData["Users"] as IEnumerable<Acebook.Models.User>)
+                                                {
+                                                if (commentUser.Id == comment.userId)
+                                            {
+                                                <span>@commentUser.Name</span>;
+                                            }
+                                            } at @comment.CreatedAt</small></h6>
                                         <br>
                                     </div>
                                 }
@@ -68,9 +81,9 @@
                         <form action='@urlAddComment' method="post">
                             <div class="container">
                                 <!-- <label for="content"><b>Post </b></label> -->
-                                <input type="text" placeholder="comment" style="text-align: center" name="body" required>
+                                <textarea col="5" row="3" placeholder="comment" style="text-align: center" name="body" required></textarea><br>
                                 <input type="hidden" name="postId" value=@item.Id required>
-                                <input type="hidden" name="userId" value=@item.UserId required>
+                                <input type="hidden" name="userId" value=1 required>
                                 <button type="submit" class="btn btn-primary postbtn" data-toggle="collapse" data-target=@dataTarget>Add comment</button>
                                 <div class="clearfix">
                                 </div>

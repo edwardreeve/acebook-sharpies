@@ -21,6 +21,9 @@ namespace Acebook.Controllers
         public IActionResult Index () {
             List<Post> posts = _context.Post.OrderByDescending (x => x.CreatedAt).ToList ();
             List<Comment> comments = _context.Comment.OrderBy (x => x.CreatedAt).ToList ();
+            List<User> users = _context.User.ToList();
+
+            ViewData["Users"] = users;
             ViewData["Posts"] = posts;
             ViewData["Comments"] = comments;
             GetUserSession();
