@@ -11,7 +11,7 @@
     <form action='@url' method="post">
         <div class="container">
             <!-- <label for="content"><b>Post </b></label> -->
-            <input type="text" width=30px placeholder="Add message" style="text-align: center" name="body" required>
+            <textarea col="20" row="10" placeholder="Add message" style="text-align: center" name="body" required></textarea><br>
             <button type="submit" class="btn btn-primary postbtn">post</button>
             <div class="clearfix">
             </div>
@@ -66,7 +66,7 @@
                         <form action='@urlAddComment' method="post">
                             <div class="container">
                                 <!-- <label for="content"><b>Post </b></label> -->
-                                <input type="text" placeholder="comment" style="text-align: center" name="body" required>
+                                <textarea col="5" row="3" placeholder="comment" style="text-align: center" name="body" required></textarea><br>
                                 <input type="hidden" name="postId" value=@item.Id required>
                                 <input type="hidden" name="userId" value=1 required>
                                 <button type="submit" class="btn btn-primary postbtn" data-toggle="collapse" data-target=@dataTarget>Add comment</button>
