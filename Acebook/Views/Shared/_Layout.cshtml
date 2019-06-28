@@ -52,6 +52,11 @@
                             </a>
                             }
                         </li>
+                         @if(ViewBag.SessionUserId != 1) {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Signout">Sign Out</a>
+                            </li>
+                         }
                     </ul>
                 </div>
             </div>

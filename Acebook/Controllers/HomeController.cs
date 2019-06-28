@@ -105,6 +105,12 @@ namespace Acebook.Controllers
             ViewBag.SessionUserId = userId;
             ViewBag.SessionUser = userName;
         }
+        
+
+        public ActionResult Signout() {
+            HttpContext.Session.Clear();
+            return Redirect ("/");
+        }
 
         [ResponseCache (Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error () {
