@@ -181,6 +181,9 @@ acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Acebook.csproj.CopyComplete
 /Users/student/group_projects/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Acebook.Views.pdb
 /Users/student/group_projects/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Acebook.csproj.CopyComplete
 /Users/student/Documents/cSharp/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Razor/Views/Home/Signup.g.cshtml.cs
+<<<<<<< HEAD
+/Users/edreeve/makers/projects/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Razor/Views/Home/Signup.g.cshtml.cs
+=======
 /Users/student/csharp/acebook-sharpies/Acebook/bin/Debug/netcoreapp2.2/Acebook.deps.json
 /Users/student/csharp/acebook-sharpies/Acebook/bin/Debug/netcoreapp2.2/Acebook.runtimeconfig.json
 /Users/student/csharp/acebook-sharpies/Acebook/bin/Debug/netcoreapp2.2/Acebook.runtimeconfig.dev.json
@@ -212,3 +215,4 @@ acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Acebook.csproj.CopyComplete
 /Users/student/csharp/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Acebook.dll
 /Users/student/csharp/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Acebook.pdb
 /Users/student/csharp/acebook-sharpies/Acebook/obj/Debug/netcoreapp2.2/Acebook.csproj.CopyComplete
+>>>>>>> 8e85e1e3cd5780cea28467ff599bbb6e1875f880
