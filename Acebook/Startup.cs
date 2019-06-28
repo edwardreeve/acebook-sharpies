@@ -30,6 +30,11 @@ namespace Acebook {
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.Cookie.Name = ".Acebook";
+            });
+
             services.AddDbContext<AcebookContext> (options =>
                 options.UseNpgsql (Configuration.GetConnectionString ("DefaultConnection")));
 
@@ -49,6 +54,7 @@ namespace Acebook {
             app.UseHttpsRedirection ();
             app.UseStaticFiles ();
             app.UseCookiePolicy ();
+            app.UseSession();
 
             app.UseMvc (routes => {
                 routes.MapRoute (
