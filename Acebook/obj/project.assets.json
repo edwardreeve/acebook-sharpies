@@ -12631,23 +12631,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/student/.nuget/packages/": {},
+    "/Users/linna@paddle.com/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/Acebook.csproj",
+      "projectUniqueName": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/Acebook.csproj",
       "projectName": "Acebook",
-      "projectPath": "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/Acebook.csproj",
-      "packagesPath": "/Users/student/.nuget/packages/",
-      "outputPath": "/Users/student/Documents/cSharp/acebook-sharpies/Acebook/obj/",
+      "projectPath": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/Acebook.csproj",
+      "packagesPath": "/Users/linna@paddle.com/.nuget/packages/",
+      "outputPath": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/student/.nuget/NuGet/NuGet.Config"
+        "/Users/linna@paddle.com/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
@@ -12732,12 +12732,6 @@
     }
   },
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file /Users/student/Documents/cSharp/acebook-sharpies/Acebook/obj/Acebook.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",
