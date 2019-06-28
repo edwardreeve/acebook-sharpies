@@ -106,6 +106,13 @@ namespace Acebook.Controllers
             ViewBag.SessionUser = userName;
         }
         
+        [HttpDelete]
+          public async Task<ActionResult<string>> DeletePost(long id) {
+          var item = _context.Post.Find(id);
+          _context.Post.Remove(item);
+          await _context.SaveChangesAsync();
+            return Redirect ("/");
+       }
 
         public ActionResult Signout() {
             HttpContext.Session.Clear();

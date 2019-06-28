@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/Acebook.csproj": {}
+    "/Users/student/csharp/acebook-sharpies/Acebook/Acebook.csproj": {}
   },
   "projects": {
-    "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/Acebook.csproj": {
+    "/Users/student/csharp/acebook-sharpies/Acebook/Acebook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/Acebook.csproj",
+        "projectUniqueName": "/Users/student/csharp/acebook-sharpies/Acebook/Acebook.csproj",
         "projectName": "Acebook",
-        "projectPath": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/Acebook.csproj",
-        "packagesPath": "/Users/linna@paddle.com/.nuget/packages/",
-        "outputPath": "/Users/linna@paddle.com/week_nine/acebook-sharpies/Acebook/obj/",
+        "projectPath": "/Users/student/csharp/acebook-sharpies/Acebook/Acebook.csproj",
+        "packagesPath": "/Users/student/.nuget/packages/",
+        "outputPath": "/Users/student/csharp/acebook-sharpies/Acebook/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/linna@paddle.com/.nuget/NuGet/NuGet.Config"
+          "/Users/student/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
