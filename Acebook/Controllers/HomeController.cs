@@ -106,7 +106,7 @@ namespace Acebook.Controllers
             ViewBag.SessionUser = userName;
         }
         
-        [HttpDelete]
+        [HttpPost ("deletepost")]
           public async Task<ActionResult<string>> DeletePost(long id) {
           var item = _context.Post.Find(id);
           _context.Post.Remove(item);

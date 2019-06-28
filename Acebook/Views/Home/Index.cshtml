@@ -31,9 +31,11 @@
                 <div class="card-header text-center">
                     <blockquote class="blockquote mb-0">
                         <p class="postBody">@item.Body</p>
-                        <a href="@urlDeletePost">Delete</a>
-                            <!-- <a href="@urlDeletePost"><span class="glyphicon glyphicon-trash" ></span></a> </p> -->
-
+                            <form method='delete' action='/deletepost'>
+                                <input type="hidden" value=@item.Id name="id">
+                                <input type="submit" value="Delete">
+                                <!-- <a href="@urlDeletePost"><span class="glyphicon glyphicon-trash" ></span></a> </p> -->
+                            </form>
                         <footer class="blockquote-footer">Posted at @item.CreatedAt</footer>
                     </blockquote>
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target=@dataTarget aria-expanded="false" aria-controls=@divId>
