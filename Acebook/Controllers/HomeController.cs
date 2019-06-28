@@ -109,6 +109,7 @@ namespace Acebook.Controllers
 
         public ActionResult Signout() {
             HttpContext.Session.Clear();
+            HttpContext.Session.SetString("userId", "1");
             return Redirect ("/");
         }
 
