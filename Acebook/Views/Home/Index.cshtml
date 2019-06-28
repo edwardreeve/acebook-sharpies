@@ -33,15 +33,15 @@
                         <p class="postBody">@item.Body</p>
                             @if(ViewBag.SessionUserId == item.UserId)
                             {
-                                <form method='delete' action='@urlDeletePost'>
-                                    <input type="hidden" value=@item.Id name="id" />
-                                    <input type="submit" value="Delete" />
-                                </form>
-
                                 <form method='put' action='@urlUpdatePost'>
                                     <input type="hidden" value=@item.Id name="id" />
                                     <input type="text" name="body" placeholder="Update your post here..." />
                                     <input type="submit" value="Update" />
+                                </form>
+
+                                 <form method='delete' action='@urlDeletePost'>
+                                    <input type="hidden" value=@item.Id name="id" />
+                                    <input type="submit" value="Delete" />
                                 </form>
                             }
                         <footer class="blockquote-footer">Posted at @item.CreatedAt</footer>
