@@ -35,13 +35,13 @@
                                 <form method='put' action='@urlUpdatePost'>
                                     <input type="hidden" value=@item.Id name="id" />
                                     <input type="text" name="body" placeholder="Update your post" />
-                                    <input type="submit" value="Update" />
-                                </form>
-
+                                    <input type="submit" class="button btn-primary" value="Update" />
                                  <form method='delete' action='@urlDeletePost'>
                                     <input type="hidden" value=@item.Id name="id" />
-                                    <input type="submit" value="Delete" />
+                                    <span><input class="button btn-primary" style="display: inline" type="submit" value="Delete" /></span>
                                 </form>
+                                </form>
+
                             }
 
                         <footer class="blockquote-footer">Posted at @item.CreatedAt by @foreach(var user in ViewData["Users"] as IEnumerable<Acebook.Models.User>)

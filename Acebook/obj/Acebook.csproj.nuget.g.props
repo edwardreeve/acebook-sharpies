@@ -4,8 +4,8 @@
     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
-    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/student/.nuget/packages/</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/student/.nuget/packages/;/usr/local/share/dotnet/sdk/NuGetFallbackFolder</NuGetPackageFolders>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/edreeve/.nuget/packages/</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/edreeve/.nuget/packages/;/usr/local/share/dotnet/sdk/NuGetFallbackFolder</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.1.0</NuGetToolVersion>
   </PropertyGroup>
@@ -23,12 +23,12 @@
     <Import Project="/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.app/2.2.0/build/netcoreapp2.2/Microsoft.AspNetCore.App.props" Condition="Exists('/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.app/2.2.0/build/netcoreapp2.2/Microsoft.AspNetCore.App.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgNUnit_Snippets Condition=" '$(PkgNUnit_Snippets)' == '' ">/Users/student/.nuget/packages/nunit.snippets/1.11.0</PkgNUnit_Snippets>
+    <PkgNUnit_Snippets Condition=" '$(PkgNUnit_Snippets)' == '' ">/Users/edreeve/.nuget/packages/nunit.snippets/1.11.0</PkgNUnit_Snippets>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.entityframeworkcore.tools/2.2.0</PkgMicrosoft_EntityFrameworkCore_Tools>
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.codeanalysis.analyzers/1.1.0</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgMicrosoft_AspNetCore_Razor_Design Condition=" '$(PkgMicrosoft_AspNetCore_Razor_Design)' == '' ">/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.razor.design/2.2.0</PkgMicrosoft_AspNetCore_Razor_Design>
-    <PkgjQuery Condition=" '$(PkgjQuery)' == '' ">/Users/student/.nuget/packages/jquery/3.0.0</PkgjQuery>
-    <PkgFontAwesome Condition=" '$(PkgFontAwesome)' == '' ">/Users/student/.nuget/packages/fontawesome/4.7.0</PkgFontAwesome>
-    <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">/Users/student/.nuget/packages/entityframework/6.2.0</PkgEntityFramework>
+    <PkgjQuery Condition=" '$(PkgjQuery)' == '' ">/Users/edreeve/.nuget/packages/jquery/3.0.0</PkgjQuery>
+    <PkgFontAwesome Condition=" '$(PkgFontAwesome)' == '' ">/Users/edreeve/.nuget/packages/fontawesome/4.7.0</PkgFontAwesome>
+    <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">/Users/edreeve/.nuget/packages/entityframework/6.2.0</PkgEntityFramework>
   </PropertyGroup>
 </Project>
