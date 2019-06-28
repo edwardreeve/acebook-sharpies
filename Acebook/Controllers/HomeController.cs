@@ -31,7 +31,8 @@ namespace Acebook.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> CreatePost (string body, long userId = 1) {
+        public async Task<ActionResult> CreatePost (string body) {
+            long userId = Convert.ToInt64(HttpContext.Session.GetString("userId"));
             Post post = new Post ();
             Post newPost = post.CreatePost (body, userId);
 
@@ -100,8 +101,34 @@ namespace Acebook.Controllers
         {
             long userId = Convert.ToInt64(HttpContext.Session.GetString("userId"));
             string userName = HttpContext.Session.GetString("userName");
+            if (userId == 0)
+            {
+                userId = 1;    
+            }
             ViewBag.SessionUserId = userId;
             ViewBag.SessionUser = userName;
+        }
+        
+        // [HttpDelete]
+          public async Task<ActionResult> DeletePost(long id) {
+            var item = _context.Post.Find(id);
+            _context.Post.Remove(item);
+            await _context.SaveChangesAsync();
+            return Redirect ("/");
+        }
+
+        // [HttpPut]
+         public async Task<ActionResult> UpdatePost(long id, string body) {
+            var item = _context.Post.Find(id);
+            item.Body = body;
+            await _context.SaveChangesAsync();
+            return Redirect ("/");
+        }
+
+        public ActionResult Signout() {
+            HttpContext.Session.Clear();
+            HttpContext.Session.SetString("userId", "1");
+            return Redirect ("/");
         }
 
         [ResponseCache (Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
